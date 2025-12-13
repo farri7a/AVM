@@ -1,0 +1,639 @@
+:root {
+  --bg: #050816;
+  --bg-alt: #0b1020;
+  --card: #0f172a;
+  --accent: #ff0037;
+  --accent-soft: rgba(255, 0, 55, 0.16);
+  --text: #f9fafb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+  --radius: 18px;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Layout base */
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.section {
+  padding: 64px 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 6, 23, 0.96),
+    rgba(2, 6, 23, 0.8),
+    transparent
+  );
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(14px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 🔑 CLAVE */
+  padding: 12px 0;
+  gap: 16px;
+}
+
+
+.logo-block {
+  display: flex;
+  align-items: center;
+}
+
+.logo-badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.logo-img{
+  width: 64px;
+  height: 54px;
+  object-fit: contain; /* mejor para logos */
+  display: block;
+}
+
+.logo-link{
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.logo-subtitle {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.logo-link {
+  flex-shrink: 0; /* 🔑 NO dejes que el logo empuje al nav */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: fit-content;
+}
+
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: auto;   /* 🔥 esto empuja el nav a la derecha */
+}
+
+
+.main-nav a {
+  padding: 8px 10px;
+  border-radius: 999px;
+  line-height: 1;
+  opacity: 0.9;
+}
+.main-nav a:hover {
+  opacity: 1;
+
+}
+
+.main-nav a.nav-cta {
+  padding: 12px 30px;              /* ancho GRANDE posta */
+  background: rgba(255, 0, 55, 0.22);
+  border: 1px solid var(--accent);
+  box-shadow: 0 10px 24px rgba(255, 0, 55, 0.18);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  opacity: 1;                      /* que no herede el 0.9 */
+}
+.main-nav a.nav-cta:hover {
+  background: rgba(255, 0, 55, 0.32);
+  transform: translateY(-1px);
+  transition: 0.15s ease;
+}
+.logo-brand{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.logo-main{
+  height: 42px;          /* ajustable */
+  width: auto;
+  display: block;
+}
+
+.logo-location{
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+
+
+/* Hero */
+
+.hero {
+  padding: 72px 0 56px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  margin-bottom: 16px;
+}
+
+.hero-copy {
+  color: var(--muted);
+  max-width: 36rem;
+  margin-bottom: 22px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.hero-hours {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.hero-card {
+  background: radial-gradient(circle at top left, #1f2937, #020617);
+  border-radius: 22px;
+  padding: 18px 18px 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+}
+
+.hero-card-title {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.hero-modes {
+  list-style: none;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 8px 10px;
+  margin-bottom: 10px;
+}
+
+.hero-modes li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  padding: 6px 4px;
+}
+
+.hero-modes li + li {
+  border-top: 1px dashed rgba(148, 163, 184, 0.4);
+}
+
+.hero-card-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Botones */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.08s ease,
+    background 0.12s ease, border-color 0.12s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #ff0037, #ff7a18);
+  box-shadow: 0 15px 35px rgba(248, 113, 113, 0.4);
+}
+
+.btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(248, 113, 113, 0.55);
+}
+
+.btn.ghost {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: rgba(148, 163, 184, 0.5);
+}
+
+.btn.ghost:hover {
+  border-color: #e5e7eb;
+}
+
+/* Secciones comunes */
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.section-lead {
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+/* Cards experiencias */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px 16px 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+}
+
+.card-time {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.card-price {
+  font-weight: 700;
+  color: #f97373;
+}
+
+.card-list {
+  list-style: none;
+  font-size: 0.88rem;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 4px 0 8px;
+}
+
+.card-cta {
+  margin-top: auto;
+  font-size: 0.85rem;
+  padding: 8px 10px;
+  border-radius: 999px;
+  text-align: center;
+  border: 1px solid rgba(248, 113, 113, 0.6);
+  background: var(--accent-soft);
+}
+
+/* Cómo funciona */
+
+.how-it-works {
+  background: radial-gradient(circle at top, #111827, #020617);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.step {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px 14px;
+  border: 1px solid var(--border);
+}
+
+.step-number {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  border: 1px solid rgba(248, 113, 113, 0.7);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+/* FAQ */
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.faq-item {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 14px 14px 12px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.faq-item h3 {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+/* Ubicación */
+
+.location {
+  background: #020617;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 24px;
+}
+
+.location-list {
+  list-style: none;
+  margin: 10px 0 18px;
+  font-size: 0.93rem;
+}
+
+.location-list li + li {
+  margin-top: 4px;
+}
+
+.location-map-placeholder {
+  border-radius: var(--radius);
+  border: 1px dashed rgba(148, 163, 184, 0.5);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Reservas */
+
+.reservas {
+  background: radial-gradient(circle at top, #111827, #020617);
+}
+
+.reservas-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 28px;
+}
+
+.reserva-form {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: var(--radius);
+  padding: 18px 16px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: var(--shadow);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.field-inline {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+label {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: var(--muted);
+}
+
+input,
+select,
+textarea {
+  background: #020617;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  padding: 8px 9px;
+  font: inherit;
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #f97373;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form-note {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.reservas-side {
+  font-size: 0.9rem;
+}
+
+.reservas-side ul {
+  margin-top: 10px;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid rgba(15, 23, 42, 0.9);
+  background: #020617;
+  padding: 16px 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .location-grid,
+  .reservas-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .steps-grid,
+  .faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main-nav {
+    gap: 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-grid {
+    gap: 20px;
+  }
+
+  .cards-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .steps-grid,
+  .faq-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+/* Logos header */
+.logo-container {
+  flex: 0 0 auto;
+}
+
+
+.logo-oficial {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+
+.logo-text-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-texto {
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+.logo-location {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
