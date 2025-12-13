@@ -529,36 +529,84 @@ textarea {
   color: var(--muted);
 }
 
-/* Footer */
+/* =========================
+   FOOTER – ESTILO VELOCITY
+   ========================= */
 
 .site-footer {
-  border-top: 1px solid rgba(15, 23, 42, 0.9);
   background: #020617;
-  padding: 16px 0;
-  font-size: 0.85rem;
-  color: var(--muted);
+  border-top: 1px solid rgba(148,163,184,0.2);
+  padding: 40px 0;
+  color: #9ca3af;
 }
 
 .footer-grid {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 28px;
 }
 
-.footer-links {
+/* Marca */
+.footer-brand {
   display: flex;
-  align-items: center;
-  gap: 6px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+}
+
+.footer-title {
+  font-family: "Sportage", system-ui, sans-serif;
+  font-weight: 200;
+  font-style: italic;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+  font-size: 1.1rem;
+}
+
+.footer-sub {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Columnas */
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-h {
+  font-weight: 700;
+  color: #e5e7eb;
+  margin-bottom: 6px;
+}
+
+.footer-col a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
 }
 
 /* Responsive */
-
 @media (max-width: 900px) {
-  .hero-grid,
-  .location-grid,
-  .reservas-grid {
-    grid-template-columns: minmax(0, 1fr);
+  .footer-cols {
+    grid-template-columns: 1fr;
   }
+}
 
   .cards-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
