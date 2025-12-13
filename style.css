@@ -302,156 +302,156 @@ a {
   border-color: #e5e7eb;
 }
 
-/* Secciones comunes */
+<!-- CÓMO FUNCIONA (estilo pro) -->
+<section class="section how-it-works">
+  <div class="container">
+    <h2>¿Cómo funciona?</h2>
+    <p class="section-lead">Reservás, venís y corrés. Nosotros te guiamos en todo.</p>
 
-.section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 6px;
-}
+    <div class="steps-grid">
+      <div class="step">
+        <span class="step-number">1</span>
+        <h3>Elegí tu experiencia</h3>
+        <p>Grand Prix, Mini GP, Quick Race o Mini Torneo / Mini Le Mans.</p>
+      </div>
 
-.section-lead {
-  color: var(--muted);
-  margin-bottom: 28px;
-}
+      <div class="step">
+        <span class="step-number">2</span>
+        <h3>Reservá tu horario</h3>
+        <p>Dejá tus datos y el sistema genera un mensaje listo para WhatsApp.</p>
+      </div>
 
-/* Cards experiencias */
+      <div class="step">
+        <span class="step-number">3</span>
+        <h3>Venís a correr</h3>
+        <p>Llegá 10 min antes. Te configuramos todo y salís a pista.</p>
+      </div>
+    </div>
 
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-}
+    <div class="home-ctas">
+      <a href="#reservas" class="btn primary">Reservar ahora</a>
+      <a href="#experiencias-mini" class="btn ghost">Ver experiencias</a>
+    </div>
+  </div>
+</section>
 
-.card {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 18px 16px 16px;
-  border: 1px solid var(--border);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+<!-- EXPERIENCIAS (MENÚ DESPLEGABLE) -->
+<section id="experiencias-mini" class="section">
+  <div class="container">
+    <h2>Experiencias</h2>
+    <p class="section-lead">Tocá para ver qué incluye cada modo y sus precios.</p>
 
-.card h3 {
-  font-size: 1.1rem;
-}
+    <div class="accordion-list">
+      <details class="acc">
+        <summary class="acc-btn">🏎 Modo Grand Prix</summary>
+        <div class="acc-body">
+          <p><strong>Lun–Jue:</strong> $12.500 (15% OFF) · <strong>Vie–Sáb:</strong> $15.000</p>
+          <p>Carrera completa con práctica, quali y final. ~60 min aprox. Con reserva previa.</p>
+        </div>
+      </details>
 
-.card-time {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
+      <details class="acc">
+        <summary class="acc-btn">🏁 Mini Grand Prix</summary>
+        <div class="acc-body">
+          <p><strong>Lun–Jue:</strong> $8.500 (15% OFF) · <strong>Vie–Sáb:</strong> $10.000</p>
+          <p>Versión más corta: quali + carrera. ~30 min aprox. Con reserva previa.</p>
+        </div>
+      </details>
 
-.card-price {
-  font-weight: 700;
-  color: #f97373;
-}
+      <details class="acc">
+        <summary class="acc-btn">⚡ Quick Race</summary>
+        <div class="acc-body">
+          <p><strong>Precio:</strong> $6.500</p>
+          <p>Entrás directo a correr. ~15 min aprox.</p>
+        </div>
+      </details>
 
-.card-list {
-  list-style: none;
-  font-size: 0.88rem;
-  color: var(--muted);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin: 4px 0 8px;
-}
+      <details class="acc">
+        <summary class="acc-btn">🏆 Mini Torneo / Mini Le Mans</summary>
+        <div class="acc-body">
+          <p><strong>Lun–Jue:</strong> $14.000 por simracer (15% OFF) · <strong>Vie–Sáb:</strong> $16.500</p>
+          <p>Torneo (Copa Oro/Plata) o Le Mans por equipos con cambio de pilotos. Ideal 8 a 12 simracers.</p>
+          <p>Rankings en pantalla + fotos en podio.</p>
+        </div>
+      </details>
+    </div>
 
-.card-cta {
-  margin-top: auto;
-  font-size: 0.85rem;
-  padding: 8px 10px;
-  border-radius: 999px;
-  text-align: center;
-  border: 1px solid rgba(248, 113, 113, 0.6);
-  background: var(--accent-soft);
-}
+    <div class="home-ctas">
+      <a href="#reservas" class="btn primary">Reservar turno</a>
+      <a href="#ubicacion" class="btn ghost">Ver ubicación</a>
+    </div>
+  </div>
+</section>
 
-/* Cómo funciona */
+<!-- UBICACIÓN + GOOGLE MAPS -->
+<section id="ubicacion" class="section location">
+  <div class="container location-grid">
+    <div>
+      <h2>Ubicación</h2>
+      <p class="section-lead">Planta 1 (Planta Uno), Godoy Cruz, Mendoza.</p>
 
-.how-it-works {
-  background: radial-gradient(circle at top, #111827, #020617);
-}
+      <ul class="location-list">
+        <li><strong>Horarios:</strong></li>
+        <li>· Lunes a miércoles: 17:00 a 00:00</li>
+        <li>· Jueves a sábado: 17:00 a 01:00</li>
+        <li>· Domingos: solo eventos especiales</li>
+      </ul>
 
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
+      <div class="home-ctas">
+        <a class="btn ghost" target="_blank"
+           href="https://www.google.com/maps/search/?api=1&query=Planta+1+Godoy+Cruz+Mendoza">
+          Abrir en Google Maps
+        </a>
+        <a href="#reservas" class="btn primary">Reservar</a>
+      </div>
+    </div>
 
-.step {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 16px 14px;
-  border: 1px solid var(--border);
-}
+    <div class="map-embed">
+      <iframe
+        title="Google Maps - Autódromo Virtual Mendoza"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Planta%201%20Godoy%20Cruz%20Mendoza&output=embed">
+      </iframe>
+    </div>
+  </div>
+</section>
 
-.step-number {
-  display: inline-flex;
-  width: 26px;
-  height: 26px;
-  border-radius: 999px;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-soft);
-  border: 1px solid rgba(248, 113, 113, 0.7);
-  font-size: 0.85rem;
-  margin-bottom: 8px;
-}
+<!-- FAQ (UN SOLO BOTÓN QUE DESPLIEGA TODO) -->
+<section id="faq" class="section">
+  <div class="container">
+    <details class="faq-wrap">
+      <summary class="faq-btn">Preguntas frecuentes</summary>
 
-/* FAQ */
+      <div class="faq-body">
+        <div class="faq-q">
+          <h3>¿Necesito experiencia previa?</h3>
+          <p>No. Te explicamos todo y podés usar ayudas si recién empezás.</p>
+        </div>
 
-.faq-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
+        <div class="faq-q">
+          <h3>¿Edad mínima?</h3>
+          <p>Edad mínima: 12 años y 1,45 m de estatura.</p>
+        </div>
 
-.faq-item {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 14px 14px 12px;
-  border: 1px solid var(--border);
-  font-size: 0.9rem;
-}
+        <div class="faq-q">
+          <h3>¿Puntualidad?</h3>
+          <p>Llegar 10 min antes. Pasados 5 min la experiencia puede acortarse. A los 10 min se cancela sin reembolso.</p>
+        </div>
 
-.faq-item h3 {
-  font-size: 0.95rem;
-  margin-bottom: 6px;
-}
+        <div class="faq-q">
+          <h3>Cancelaciones</h3>
+          <p>Hasta 48 hs antes: reintegro del 90%. Luego no hay cambios ni devoluciones.</p>
+        </div>
 
-/* Ubicación */
-
-.location {
-  background: #020617;
-}
-
-.location-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  gap: 24px;
-}
-
-.location-list {
-  list-style: none;
-  margin: 10px 0 18px;
-  font-size: 0.93rem;
-}
-
-.location-list li + li {
-  margin-top: 4px;
-}
-
-.location-map-placeholder {
-  border-radius: var(--radius);
-  border: 1px dashed rgba(148, 163, 184, 0.5);
-  padding: 18px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 0.85rem;
-  color: var(--muted);
-}
+        <div class="faq-q">
+          <h3>¿Se puede ir en grupo / eventos?</h3>
+          <p>Sí. Mini Torneos y Mini Le Mans son ideales para 8 a 12 simracers. Consultá por eventos especiales.</p>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
 
 /* Reservas */
 
