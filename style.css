@@ -712,3 +712,65 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   GOOGLE MAPS REVIEWS STYLE
+   ========================= */
+
+.google-style{
+  grid-template-columns: repeat(3, minmax(0,1fr));
+}
+
+.google-review{
+  background:#ffffff;
+  color:#111827;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.25),
+    0 2px 6px rgba(0,0,0,.15);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  position:relative;
+}
+
+/* efecto "tarjeta flotante" */
+.google-review::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:16px;
+  border:1px solid rgba(0,0,0,.08);
+  pointer-events:none;
+}
+
+.google-review-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.google-review .stars{
+  color:#fbbc05; /* amarillo Google */
+  letter-spacing:2px;
+  font-size:0.95rem;
+}
+
+.google-badge{
+  font-size:0.8rem;
+  color:#1f2937;
+  border:1px solid rgba(0,0,0,.15);
+  padding:4px 10px;
+  border-radius:999px;
+  font-weight:600;
+}
+
+.google-review-text{
+  font-size:0.95rem;
+  line-height:1.5;
+  margin:0;
+}
+
+.google-review-name{
+  margin-top:auto;
+  font-size:0.85rem;
