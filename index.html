@@ -4,20 +4,19 @@
   <meta charset="UTF-8" />
   <title>Autódromo Virtual Mendoza</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container nav">
-      <!-- Logos (clickeables y llevan al inicio) -->
-      <a href="#hero" class="logo-link">
+      <a href="#hero" class="logo-link" aria-label="Ir al inicio">
         <div class="logo-container">
           <img src="logo-avm.png" alt="Autódromo Virtual Mendoza" class="logo-oficial" />
           <img src="logo-texto.png" alt="Autódromo Virtual" class="logo-texto" />
         </div>
       </a>
 
-      <!-- Navegación -->
       <nav class="main-nav">
         <a href="#experiencias">Experiencias</a>
         <a href="#faq">Preguntas</a>
@@ -26,7 +25,6 @@
       </nav>
     </div>
   </header>
-
 
   <main>
     <!-- HERO -->
@@ -45,9 +43,7 @@
             <a href="#experiencias" class="btn ghost">Ver experiencias y precios</a>
           </div>
 
-          <p class="hero-hours">
-            Lunes a sábado · 17:00 a 01:00 hs · Planta 1, Godoy Cruz
-          </p>
+          <p class="hero-hours">Lunes a sábado · 17:00 a 01:00 hs · Planta 1, Godoy Cruz</p>
         </div>
 
         <aside class="hero-card">
@@ -64,70 +60,66 @@
     </section>
 
     <!-- EXPERIENCIAS -->
-<section id="experiencias" class="section experiences">
-  <div class="container">
-    <h2>Experiencias</h2>
-    <p class="section-lead">Elegí tu modo y reservá.</p>
+    <section id="experiencias" class="section experiences">
+      <div class="container">
+        <h2>Experiencias</h2>
+        <p class="section-lead">Elegí tu modo y reservá.</p>
 
-    <div class="cards-grid">
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Modo Grand Prix</h3>
+            <p class="card-time">60 min aprox.</p>
+            <p class="card-price">
+              $12.500 <span class="price-note">(lun–jue · 15% OFF)</span><br>
+              <span class="price-list">$15.000 precio de lista (vie–sáb)</span>
+            </p>
+            <ul class="card-list">
+              <li>Práctica, clasificación y carrera completa.</li>
+              <li>Formato ideal para vivir un finde de GP.</li>
+              <li>Recomendado para 1 a 3 simracers.</li>
+            </ul>
+            <a href="#reservas" class="card-cta">Quiero este modo</a>
+          </article>
 
-          <div class="cards-grid">
+          <article class="card">
+            <h3>Mini Grand Prix</h3>
+            <p class="card-time">30 min aprox.</p>
+            <p class="card-price">
+              $8.500 <span class="price-note">(lun–jue · 15% OFF)</span><br>
+              <span class="price-list">$10.000 precio de lista (vie–sáb)</span>
+            </p>
+            <ul class="card-list">
+              <li>Versión más corta: quali + carrera.</li>
+              <li>Ideal para probar el simulador o venir con amigos.</li>
+            </ul>
+            <a href="#reservas" class="card-cta">Quiero este modo</a>
+          </article>
 
-            <article class="card">
-              <h3>Modo Grand Prix</h3>
-              <p class="card-time">60 min aprox.</p>
-              <p class="card-price">
-                $12.500 <span style="font-size:0.8rem;color:#9ca3af;">(lun–jue · 15% OFF)</span><br>
-                <span style="font-size:0.85rem;color:#9ca3af;">$15.000 precio de lista (vie–sáb)</span>
-              </p>
-              <ul class="card-list">
-                <li>Práctica, clasificación y carrera completa.</li>
-                <li>Formato ideal para vivir un finde de GP.</li>
-                <li>Recomendado para 1 a 3 simracers.</li>
-              </ul>
-              <a href="#reservas" class="card-cta">Quiero este modo</a>
-            </article>
+          <article class="card">
+            <h3>Quick Race</h3>
+            <p class="card-time">15 min aprox.</p>
+            <p class="card-price">$6.500</p>
+            <ul class="card-list">
+              <li>Entrás directo a correr.</li>
+              <li>Perfecto para una carrera rápida en una salida.</li>
+            </ul>
+            <a href="#reservas" class="card-cta">Quiero este modo</a>
+          </article>
 
-            <article class="card">
-              <h3>Mini Grand Prix</h3>
-              <p class="card-time">30 min aprox.</p>
-              <p class="card-price">
-                $8.500 <span style="font-size:0.8rem;color:#9ca3af;">(lun–jue · 15% OFF)</span><br>
-                <span style="font-size:0.85rem;color:#9ca3af;">$10.000 precio de lista (vie–sáb)</span>
-              </p>
-              <ul class="card-list">
-                <li>Versión más corta: quali + carrera.</li>
-                <li>Ideal para probar el simulador o venir con amigos.</li>
-              </ul>
-              <a href="#reservas" class="card-cta">Quiero este modo</a>
-            </article>
-
-            <article class="card">
-              <h3>Quick Race</h3>
-              <p class="card-time">15 min aprox.</p>
-              <p class="card-price">$6.500</p>
-              <ul class="card-list">
-                <li>Entrás directo a correr.</li>
-                <li>Perfecto para una carrera rápida en una salida.</li>
-              </ul>
-              <a href="#reservas" class="card-cta">Quiero este modo</a>
-            </article>
-
-            <article class="card">
-              <h3>Mini Torneo / Mini Le Mans</h3>
-              <p class="card-time">Formato por simracer</p>
-              <p class="card-price">
-                $14.000 <span style="font-size:0.8rem;color:#9ca3af;">(lun–jue · 15% OFF)</span><br>
-                <span style="font-size:0.85rem;color:#9ca3af;">$16.500 precio de lista (vie–sáb)</span>
-              </p>
-              <ul class="card-list">
-                <li>Torneo Copa de Oro y Copa de Plata o carrera por equipos estilo Le Mans.</li>
-                <li>Cambio de pilotos, rankings en pantalla y fotos en podio.</li>
-                <li>Ideal para grupos de 8 a 12 simracers.</li>
-              </ul>
-              <a href="#reservas" class="card-cta">Quiero este modo</a>
-            </article>
-
+          <article class="card">
+            <h3>Mini Torneo / Mini Le Mans</h3>
+            <p class="card-time">Formato por simracer</p>
+            <p class="card-price">
+              $14.000 <span class="price-note">(lun–jue · 15% OFF)</span><br>
+              <span class="price-list">$16.500 precio de lista (vie–sáb)</span>
+            </p>
+            <ul class="card-list">
+              <li>Torneo Copa de Oro y Copa de Plata o carrera por equipos estilo Le Mans.</li>
+              <li>Cambio de pilotos, rankings en pantalla y fotos en podio.</li>
+              <li>Ideal para grupos de 8 a 12 simracers.</li>
+            </ul>
+            <a href="#reservas" class="card-cta">Quiero este modo</a>
+          </article>
         </div>
       </div>
     </section>
@@ -136,150 +128,109 @@
     <section class="section how-it-works">
       <div class="container">
         <h2>¿Cómo funciona?</h2>
-        <p class="section-lead">
-          Reservás tu experiencia, venís a Planta 1 y nosotros nos encargamos
-          del resto.
-        </p>
+        <p class="section-lead">Reservás tu experiencia, venís a Planta 1 y nosotros nos encargamos del resto.</p>
 
         <div class="steps-grid">
           <div class="step">
             <span class="step-number">1</span>
             <h3>Elegís tu modo</h3>
-            <p>
-              Mini Le Mans, Grand Prix, Mini GP o Quick Race. Cada uno tiene
-              duración y formato distintos para que elijas la experiencia que
-              más te guste.
-            </p>
+            <p>Mini Le Mans, Grand Prix, Mini GP o Quick Race. Cada uno tiene duración y formato distintos.</p>
           </div>
 
           <div class="step">
             <span class="step-number">2</span>
             <h3>Reservás tu horario</h3>
-            <p>
-              Completás tus datos, la cantidad de pilotos y el rango horario.
-              Te confirmamos la reserva por WhatsApp.
-            </p>
+            <p>Completás tus datos y el rango horario. Te confirmamos la reserva por WhatsApp.</p>
           </div>
 
           <div class="step">
             <span class="step-number">3</span>
             <h3>Venís a correr</h3>
-            <p>
-              Llegás unos minutos antes, te explicamos el simulador y salís a
-              girar en los mejores circuitos del mundo.
-            </p>
+            <p>Llegás unos minutos antes, te explicamos el simulador y salís a girar.</p>
           </div>
         </div>
       </div>
     </section>
 
-    
-<section class="section reviews" id="resenas">
-  <div class="container">
-    <div class="section-head">
-      <h2>Reseñas de Google</h2>
-      <p class="section-lead">Lo que dicen quienes ya corrieron en AVM.</p>
-    </div>
-
-    <div class="reviews-grid google-style">
-
-      <article class="google-review">
-        <div class="google-review-top">
-          <span class="stars">★★★★★</span>
-          <span class="google-badge">Google</span>
+    <!-- RESEÑAS -->
+    <section class="section reviews" id="resenas">
+      <div class="container">
+        <div class="section-head">
+          <h2>Reseñas de Google</h2>
+          <p class="section-lead">Lo que dicen quienes ya corrieron en AVM.</p>
         </div>
-        <p class="google-review-text">
-          “Lindo lugar para divertirse y excelente la atención de los que trabajan ahí!!!”
-        </p>
-        <span class="google-review-name">— Mangel Puga</span>
-      </article>
 
-      <article class="google-review">
-        <div class="google-review-top">
-          <span class="stars">★★★★★</span>
-          <span class="google-badge">Google</span>
+        <div class="reviews-grid google-style">
+          <article class="google-review">
+            <div class="google-review-top">
+              <span class="stars">★★★★★</span>
+              <span class="google-badge">Google</span>
+            </div>
+            <p class="google-review-text">“Lindo lugar para divertirse y excelente la atención de los que trabajan ahí!!!”</p>
+            <span class="google-review-name">— Mangel Puga</span>
+          </article>
+
+          <article class="google-review">
+            <div class="google-review-top">
+              <span class="stars">★★★★★</span>
+              <span class="google-badge">Google</span>
+            </div>
+            <p class="google-review-text">“Excelente lugar, muy buenos los simuladores”</p>
+            <span class="google-review-name">— Lucia Mateo</span>
+          </article>
+
+          <article class="google-review">
+            <div class="google-review-top">
+              <span class="stars">★★★★★</span>
+              <span class="google-badge">Google</span>
+            </div>
+            <p class="google-review-text">“Perdí todas las carreras, pero las risas no faltaron...”</p>
+            <span class="google-review-name">— Octavio Rodriguez</span>
+          </article>
         </div>
-        <p class="google-review-text">
-          “Excelente lugar, muy buenos los simuladores”
-        </p>
-        <span class="google-review-name">— Lucia Mateo</span>
-      </article>
 
-      <article class="google-review">
-        <div class="google-review-top">
-          <span class="stars">★★★★★</span>
-          <span class="google-badge">Google</span>
+        <div class="home-ctas">
+          <a class="btn ghost" target="_blank" rel="noopener" href="https://maps.app.goo.gl/J3PtBg8TC4fE83y76">
+            Ver todas las reseñas en Google
+          </a>
         </div>
-        <p class="google-review-text">
-          “Perdí todas las carreras, pero las risas no faltaron...”
-        </p>
-        <span class="google-review-name">— Octavio Rodriguez</span>
-      </article>
-
-    </div>
-
-    <div class="home-ctas">
-      <a class="btn ghost" target="_blank" rel="noopener"
-         href="https://maps.app.goo.gl/J3PtBg8TC4fE83y76">
-        Ver todas las reseñas en Google
-      </a>
-    </div>
-  </div>
-</section>
-
+      </div>
+    </section>
 
     <!-- FAQ -->
     <section id="faq" class="section faq">
       <div class="container">
         <h2>Preguntas frecuentes</h2>
+
         <div class="faq-grid">
           <article class="faq-item">
             <h3>¿Necesito experiencia previa?</h3>
-            <p>
-              No. Te explicamos cómo usar el simulador, podés arrancar con
-              ayudas activadas y vamos ajustando según cómo te sientas.
-            </p>
+            <p>No. Te explicamos cómo usar el simulador y vamos ajustando según cómo te sientas.</p>
           </article>
 
           <article class="faq-item">
             <h3>¿Desde qué edad se puede correr?</h3>
-            <p>
-              Recomendado desde los 10/12 años aprox. Siempre acompañado por un
-              adulto si son menores.
-            </p>
+            <p>Edad mínima: 12 años y 1,45 m de estatura (recomendado).</p>
           </article>
 
           <article class="faq-item">
             <h3>¿Pueden correr varias personas?</h3>
-            <p>
-              Sí, pueden turnarse en la misma experiencia. Ideal para venir con
-              amigos y comparar tiempos.
-            </p>
+            <p>Sí, pueden turnarse en la misma experiencia. Ideal para venir con amigos.</p>
           </article>
 
           <article class="faq-item">
             <h3>¿Qué medios de pago aceptan?</h3>
-            <p>
-              Efectivo, transferencia y medios electrónicos disponibles en el
-              local. Consultá por promos vigentes al momento de la reserva.
-            </p>
+            <p>Efectivo, transferencia y medios electrónicos disponibles en el local.</p>
           </article>
 
           <article class="faq-item">
             <h3>¿Qué pasa si llego tarde?</h3>
-            <p>
-              Intentamos respetar el horario de todos. Si llegás tarde, la
-              duración de tu sesión puede acortarse para no afectar al siguiente
-              turno.
-            </p>
+            <p>Por puntualidad: llegar 10 min antes. Pasados 10 min se cancela la reserva.</p>
           </article>
 
           <article class="faq-item">
-            <h3>¿Se puede reservar para cumpleaños o eventos?</h3>
-            <p>
-              Sí, podemos armar sesiones especiales para grupos. Dejalo
-              aclarado en comentarios al momento de reservar.
-            </p>
+            <h3>¿Se puede reservar para eventos?</h3>
+            <p>Sí, podemos armar sesiones especiales para grupos, cumpleaños y empresas.</p>
           </article>
         </div>
       </div>
@@ -290,25 +241,21 @@
       <div class="container location-grid">
         <div>
           <h2>Ubicación y horarios</h2>
-          <p class="section-lead">
-            Estamos en Planta 1, Godoy Cruz, dentro del centro comercial.
-          </p>
+          <p class="section-lead">Estamos en Planta 1, Godoy Cruz, dentro del centro comercial.</p>
+
           <ul class="location-list">
             <li><strong>Dirección:</strong> Planta 1, Godoy Cruz, Mendoza.</li>
             <li><strong>Horarios:</strong> Lunes a sábado, 17:00 a 01:00 hs.</li>
           </ul>
-          <a
-            href="https://www.google.com/maps/search/Planta+1+Godoy+Cruz+Mendoza"
-            target="_blank"
-            class="btn ghost"
-          >
+
+          <a href="https://www.google.com/maps/search/Planta+1+Godoy+Cruz+Mendoza" target="_blank" class="btn ghost">
             Abrir en Google Maps
           </a>
         </div>
 
         <div class="location-map-placeholder">
-          <p>Mapa de referencia</p>
-          <span>Acá después podemos embeber el mapa real de Google.</span>
+          <p><strong>Mapa de referencia</strong></p>
+          <span>Después embeberemos el mapa real de Google.</span>
         </div>
       </div>
     </section>
@@ -319,8 +266,7 @@
         <div>
           <h2>Reservá tu turno</h2>
           <p class="section-lead">
-            Completá tus datos y generamos un mensaje listo para enviar por
-            WhatsApp al local.
+            Completá tus datos y generamos un mensaje listo para enviar por WhatsApp al local.
           </p>
 
           <form id="reserva-form" class="reserva-form">
@@ -331,13 +277,7 @@
 
             <div class="field">
               <label for="telefono">Teléfono (WhatsApp)</label>
-              <input
-                id="telefono"
-                name="telefono"
-                type="tel"
-                placeholder="Ej: 261..."
-                required
-              />
+              <input id="telefono" name="telefono" type="tel" placeholder="Ej: 261..." required />
             </div>
 
             <div class="field">
@@ -374,42 +314,26 @@
 
             <div class="field">
               <label for="pilotos">Cantidad de pilotos</label>
-              <input
-                id="pilotos"
-                name="pilotos"
-                type="number"
-                min="1"
-                max="6"
-                value="1"
-                required
-              />
+              <input id="pilotos" name="pilotos" type="number" min="1" max="12" value="1" required />
             </div>
 
             <div class="field">
               <label for="comentarios">Comentarios (opcional)</label>
-              <textarea
-                id="comentarios"
-                name="comentarios"
-                rows="3"
-                placeholder="Cumpleaños, evento, preferencias de auto, etc."
-              ></textarea>
+              <textarea id="comentarios" name="comentarios" rows="3"
+                placeholder="Cumpleaños, evento, preferencias de auto, etc."></textarea>
             </div>
 
-            <button type="submit" class="btn primary">
-              Generar reserva por WhatsApp
-            </button>
+            <button type="submit" class="btn primary">Generar reserva por WhatsApp</button>
 
-            <p class="form-note">
-              No se confirma la reserva hasta que el local responda el mensaje.
-            </p>
+            <p class="form-note">No se confirma la reserva hasta que el local responda el mensaje.</p>
           </form>
         </div>
 
         <aside class="reservas-side">
           <h3>¿Por qué reservar desde la web?</h3>
           <ul>
-            <li>Evitás esperar respuesta para datos básicos.</li>
-            <li>El mensaje llega al local con toda la info lista.</li>
+            <li>Evitás preguntas básicas y ganás tiempo.</li>
+            <li>El mensaje llega con toda la info lista.</li>
             <li>Ayudás a que el simulador se organice mejor.</li>
           </ul>
         </aside>
@@ -421,13 +345,13 @@
     <div class="container footer-grid">
       <p>© Autódromo Virtual Mendoza</p>
       <div class="footer-links">
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
         <span>·</span>
         <span>Godoy Cruz, Mendoza</span>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=1"></script>
 </body>
 </html>
