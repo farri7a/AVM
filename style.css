@@ -847,3 +847,19 @@ textarea {
   }
 }
 
+/* HERO con foto de fondo */
+.hero-photo{
+  background-image:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
+    url("hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Asegura altura para que se vea la foto */
+.hero{
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
