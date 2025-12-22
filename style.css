@@ -847,6 +847,45 @@ textarea {
   }
 }
 
+/* Header sticky más compacto */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.55);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+/* Contenido del header más angosto y centrado */
+header .nav,
+header .header-inner,
+header .container{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Un poco menos alto */
+header .nav{
+  padding: 10px 0;
+}
+
+html{ scroll-behavior: smooth; }
+
+.nav-cta{
+  padding: 12px 20px;  /* más alto y más ancho */
+  line-height: 1;
+}
+
+@media (max-width: 720px){
+  .main-nav a{
+    display:none; /* esconde Experiencias/Preguntas/Ubicación */
+  }
+  .main-nav .nav-cta{
+    display:inline-flex; /* deja el botón */
+  }
+}
+
 /* HERO con foto de fondo */
 .hero-photo{
   background-image:
@@ -879,4 +918,93 @@ textarea {
   min-height: 80vh;
   display: flex;
   align-items: center;
+}
+
+/* ===== Pack de aire general ===== */
+:root{
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 22px;
+  --space-5: 32px;
+  --space-6: 44px;
+}
+
+/* Secciones con más respiración */
+.section{
+  padding: var(--space-6) 0;
+}
+
+/* Títulos y textos más cómodos */
+h1{ line-height: 1.06; }
+h2{ line-height: 1.15; margin-bottom: var(--space-3); }
+p{ line-height: 1.55; }
+
+/* HERO: más espacio arriba/abajo */
+.hero{
+  padding: 56px 0 44px;
+}
+
+.hero-copy{
+  margin-top: var(--space-3);
+  max-width: 46ch;
+}
+
+/* Botones con más cuerpo */
+.btn{
+  padding: 14px 18px;
+}
+
+/* Separación entre CTAs */
+.hero-ctas,
+.home-ctas{
+  gap: 12px;
+  margin-top: var(--space-4);
+}
+
+/* Cards: más “aire” interno */
+.card{
+  padding: 20px;
+}
+
+.cards-grid{
+  gap: 18px;
+}
+
+/* Header sticky menos apretado */
+header{
+  padding: 10px 0;
+}
+
+header .main-nav{
+  gap: 18px;
+}
+
+/* Botón Reservar del header con más espacio */
+.nav-cta{
+  padding: 12px 22px;
+}
+
+/* Lista de "modos de experiencia" con más aire */
+.modes,
+.modes-card,
+.modes-box{
+  padding: 18px;
+}
+
+.modes li{
+  padding: 10px 0;
+}
+
+/* Mobile: un poco más de aire sin que sea eterno */
+@media (max-width: 720px){
+  .hero{
+    padding: 44px 0 34px;
+  }
+  .section{
+    padding: 34px 0;
+  }
+  .btn{
+    padding: 14px 16px;
+  }
 }
