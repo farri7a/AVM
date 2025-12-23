@@ -585,3 +585,40 @@ textarea{ resize:vertical; }
     text-align: center;
   }
 }
+/* Botón Reservar flotante (mobile) */
+.reserve-float{
+  position: fixed;
+  right: 16px;
+  bottom: 18px;
+  z-index: 9999;
+
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 18px 40px rgba(225,6,0,0.35);
+
+  transform: translateY(120%);
+  opacity: 0;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+/* Se muestra cuando el body tiene la clase */
+.show-reserve .reserve-float{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Solo en mobile */
+@media (min-width: 721px){
+  .reserve-float{ display:none; }
+}
+@media (max-width: 720px){
+  .hide-nav-on-scroll .main-nav{
+    display: none !important;
+  }
+}
