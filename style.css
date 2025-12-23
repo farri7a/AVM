@@ -622,3 +622,25 @@ textarea{ resize:vertical; }
     display: none !important;
   }
 }
+
+/*Mobile: experiencias en carrusel horizontal */
+@media (max-width: 720px){
+  .experiences .cards-grid{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 88%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 14px; 
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+  }
+  .experiences .card{
+    scroll-snap-allign: start;
+  }
+
+/*Oculta scrollbar (ios/chrome)*/
+.experiences .cards-grid::-webkit-scrollbar{
+  display:none;
+  }
+}
