@@ -540,3 +540,48 @@ textarea{ resize:vertical; }
     align-items:flex-start;
   }
 }
+
+/* =========================
+   HAMBURGUESA MOBILE
+   ========================= */
+
+.menu-toggle{
+  display: none;
+  background: none;
+  border: 1px solid rgba(255,255,255,.25);
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 720px){
+  .menu-toggle{
+    display: block;
+  }
+
+  .main-nav{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #020617;
+    border-top: 1px solid rgba(255,255,255,.15);
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .main-nav.open{
+    display: flex;
+  }
+
+  .main-nav a{
+    font-size: 1.05rem;
+    text-align: center;
+  }
+}
