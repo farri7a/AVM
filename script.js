@@ -42,3 +42,22 @@ const nav = document.querySelector('.main-nav');
 menuToggle.addEventListener('click', () => {
   nav.classList.toggle('open');
 });
+const reserveFloat = document.getElementById('reserveFloat');
+
+function onScrollToggleReserve(){
+  const y = window.scrollY || document.documentElement.scrollTop;
+  // aparece después de ~120px de scroll
+  if (y > 120) document.body.classList.add('show-reserve');
+  else document.body.classList.remove('show-reserve');
+}
+
+window.addEventListener('scroll', onScrollToggleReserve, { passive: true });
+onScrollToggleReserve();
+function onScrollHideNav(){
+  const y = window.scrollY || document.documentElement.scrollTop;
+  if (y > 120) document.body.classList.add('hide-nav-on-scroll');
+  else document.body.classList.remove('hide-nav-on-scroll');
+}
+
+window.addEventListener('scroll', onScrollHideNav, { passive: true });
+onScrollHideNav();
