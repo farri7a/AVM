@@ -628,17 +628,21 @@ textarea{ resize:vertical; }
   .experiences .cards-grid{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 88%;
+  grid-auto-columns: 92%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 14px; 
   padding-bottom: 10px;
   -webkit-overflow-scrolling: touch;
   }
-  .experiences .card{
-    scroll-snap-allign: start;
+  
+ .experiences .card{
+    min-width: 92%;
+    max-width: 92%;
+    scroll-snap-align: start;
   }
 
+  
 /*Oculta scrollbar (ios/chrome)*/
 .experiences .cards-grid::-webkit-scrollbar{
   display:none;
